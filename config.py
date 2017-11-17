@@ -1,0 +1,4 @@
+DEBUG = True
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://helpdesk:helpdesk@192.168.1.53/helpdesk'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
+SECRET_KEY = '1234567891'
