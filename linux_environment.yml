@@ -6,6 +6,7 @@ dependencies:
 - certifi=2017.7.27.1=py36h8b7b77e_0
 - click=6.7=py36h5253387_0
 - flask=0.12.2=py36hb24657c_0
+- gunicorn=19.7.1=py36h38c4014_0
 - itsdangerous=0.24=py36h93cc618_1
 - jinja2=2.9.6=py36h489bce4_1
 - libedit=3.1=heed3624_0

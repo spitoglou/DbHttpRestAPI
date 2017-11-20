@@ -1,0 +1,33 @@
+Activate the virtual environment
+source activate dbapi
+
+Make sure gunicorn is installed
+conda install gunicorn (or pip install gunicorn)
+
+make a wsgi entry file wsgi.py
+
+gunicorn wsgi:app
+
+[2017-11-20 14:47:27 +0200] [2200] [INFO] Starting gunicorn 19.7.1
+[2017-11-20 14:47:27 +0200] [2200] [INFO] Listening at: http://127.0.0.1:8000 (2200)
+[2017-11-20 14:47:27 +0200] [2200] [INFO] Using worker: sync
+[2017-11-20 14:47:27 +0200] [2205] [INFO] Booting worker with pid: 2205
+
+gunicorn --bind 0.0.0.0:5001 wsgi:app
+[2017-11-20 14:48:16 +0200] [2269] [INFO] Starting gunicorn 19.7.1
+[2017-11-20 14:48:16 +0200] [2269] [INFO] Listening at: http://0.0.0.0:5001 (2269)
+[2017-11-20 14:48:16 +0200] [2269] [INFO] Using worker: sync
+[2017-11-20 14:48:16 +0200] [2279] [INFO] Booting worker with pid: 2279
+
+gunicorn --workers 4 --bind 0.0.0.0:5001 wsgi:app
+
+[2017-11-20 14:48:38 +0200] [2316] [INFO] Starting gunicorn 19.7.1
+[2017-11-20 14:48:38 +0200] [2316] [INFO] Listening at: http://0.0.0.0:5001 (2316)
+[2017-11-20 14:48:38 +0200] [2316] [INFO] Using worker: sync
+[2017-11-20 14:48:38 +0200] [2319] [INFO] Booting worker with pid: 2319
+[2017-11-20 14:48:38 +0200] [2320] [INFO] Booting worker with pid: 2320
+[2017-11-20 14:48:38 +0200] [2321] [INFO] Booting worker with pid: 2321
+[2017-11-20 14:48:38 +0200] [2322] [INFO] Booting worker with pid: 2322
+
+sudo apt install supervisor
+
